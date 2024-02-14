@@ -11,15 +11,15 @@ const projectSchema = new mongoose.Schema({
     },
     image: {
         type: String,
-        required: true,
+        default: "",
     },
     links: {
         type: String,
         required: true,
     },
     technologies: {
-        type: String,
-        required: true
+        type: Array,
+        default: []
     }
 }, { timestamps: true})
 

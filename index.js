@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from 'dotenv'
 import bodyParser from "body-parser";
+import cors from 'cors'
 
 
 
@@ -17,12 +18,13 @@ const app = express()
 dotenv.config()
 app.use(bodyParser.json())
 app.use(express.json())
+app.use(cors())
 
 connectDB()
 
 
 app.use("/api", aboutRoute)
-app.use("/apii", projectRoute)
+app.use("/api", projectRoute)
 
 
 
