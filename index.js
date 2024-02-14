@@ -8,11 +8,11 @@ import cors from 'cors'
 import connectDB from "./config/db.js";
 import aboutRoute from './routes/aboutRoute.js'
 import projectRoute from './routes/projectRoute.js'
+import authRoute from './routes/authRoute.js'
+
+
+
 const app = express()
-
-
-
-
 
 /* CONFIGURATION */
 dotenv.config()
@@ -25,7 +25,7 @@ connectDB()
 
 app.use("/api", aboutRoute)
 app.use("/api", projectRoute)
-
+app.use("/api", authRoute)
 
 
 app.listen(process.env.PORT,()=> {

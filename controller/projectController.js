@@ -1,5 +1,4 @@
 import projectModel from '../model/projectModel.js'
-import ProjectModel from '../model/projectModel.js'
 
 
 
@@ -121,4 +120,13 @@ export const updateProject = async (req, res) => {
             message: "Update failed"
         })
     }
+}
+
+export const deleteProject = async (req, res) => {
+    const projects = await projectModel.findByIdAndDelete(req.params._id)
+    return res.status(200).json({
+        success: true,
+        message: "project delete success",
+        projects,
+    })
 }

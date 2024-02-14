@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 const introSchema = new mongoose.Schema(
   {
-    welcomeText: {
+    title: {
       type: String,
       requied: true,
     },
@@ -15,7 +15,7 @@ const introSchema = new mongoose.Schema(
     },
     image: {
       type: String,
-      requied: true
+      default: ""
     },
   },
   { timestamps: true }

@@ -1,5 +1,5 @@
 import JWT from "jsonwebtoken";
-import userModel from "../model/userModel";
+import userModel from "../model/userModel.js";
 
 
 export const requireSign = (req, res, next) => {
