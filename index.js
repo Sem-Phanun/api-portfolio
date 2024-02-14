@@ -6,7 +6,7 @@ import bodyParser from "body-parser";
 
 import connectDB from "./config/db.js";
 import aboutRoute from './routes/aboutRoute.js'
-
+import projectRoute from './routes/projectRoute.js'
 const app = express()
 
 
@@ -22,6 +22,7 @@ connectDB()
 
 
 app.use("/api", aboutRoute)
+app.use("/apii", projectRoute)
 
 
 
