@@ -105,7 +105,7 @@ export const login = async (req, res) => {
 export const getUser = async (req, res) => {
   try {
     const user = await userModel.findOne({ _id: req.params })
-    return res.status(200).json({
+    return res.status(201).json({
       success: true,
       message: "get single user success",
       user,
