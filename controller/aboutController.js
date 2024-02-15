@@ -128,6 +128,12 @@ export const deleteInfo = async (req, res) => {
   }
 };
 
+
+/* 
+  education group
+  
+*/
+
 export const createEducation = async (req, res) => {
   const { title, period } = req.body;
 
@@ -189,7 +195,7 @@ export const updateEduInfo = async (req, res) => {
     res.status(201).send({
       success: true,
       message: "edu info update success",
-      abouts,
+      education,
     });
   } catch (error) {
     return res.status(500).send({
