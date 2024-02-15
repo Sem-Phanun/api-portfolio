@@ -4,7 +4,7 @@ const aboutSchema = new mongoose.Schema(
   {
     image: {
       type: String,
-      requirede: true,
+      default: ""
     },
     title: {
       type: String,
