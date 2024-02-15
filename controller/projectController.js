@@ -1,7 +1,5 @@
 import projectModel from '../model/projectModel.js'
 
-
-
 export const createProject = async (req, res) => {
     try {
         const { title, description, image, links, technologies } = req.body

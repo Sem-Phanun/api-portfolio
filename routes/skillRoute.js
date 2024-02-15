@@ -14,7 +14,7 @@ router.delete("/delete-skill/:_id", requireSign, isAdmin, deleteSkill)
 
 /* experience router */
 
-router.get("/experience", requireSign, getExperience)
+router.get("/experience", getExperience)
 router.post("/create-experience", requireSign, isAdmin, createExperience)
 router.put("/update-experience/:_id", requireSign, isAdmin, updateExperience)
 router.delete("/delete-experice/:_id", requireSign, isAdmin, deleteExperience)
