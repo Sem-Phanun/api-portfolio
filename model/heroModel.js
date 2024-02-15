@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const introSchema = new mongoose.Schema(
+const heroSchema = new mongoose.Schema(
   {
     title: {
       type: String,
@@ -21,4 +21,4 @@ const introSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("introduce", introSchema)
+export default mongoose.model("hero", heroSchema)

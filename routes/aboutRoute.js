@@ -4,6 +4,8 @@ import { upload } from '../utils/services.js';
 import { requireSign, isAdmin } from '../middleware/authMiddleware.js'
 const router = express.Router()
 
+
+//about router
 router.get("/get-info", requireSign, isAdmin, getAllInfo);
 router.post("/create-info", requireSign, isAdmin , upload.single("image"), createInfo)
 router.put("/update-info/:_id", requireSign, isAdmin, updateInfo)
