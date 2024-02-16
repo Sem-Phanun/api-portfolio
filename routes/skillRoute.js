@@ -11,7 +11,6 @@ router.post("/create-skill", verifyToken, upload.single("image"), createSkill)
 router.put("/update-skill/:_id",verifyToken, upload.single("image"), updateSkill)
 router.delete("/delete-skill/:_id", verifyToken, deleteSkill)
 
-
 /* experience router */
 
 router.get("/experience", verifyToken, getExperience)

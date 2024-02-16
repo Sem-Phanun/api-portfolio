@@ -11,6 +11,4 @@ router.put("/update-social/:_id", verifyToken, upload.single("image"), updateSoc
 router.delete("/delete-social/:_id", verifyToken, deleteSocial)
 
 
-
-
 export default router
