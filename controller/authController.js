@@ -1,6 +1,6 @@
 import userModel from "../model/userModel.js";
 import { hashPassword, comparePassword } from "../utils/auth.js";
-import Jwt from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 
 export const register = async (req, res) => {
   try {
@@ -82,7 +82,7 @@ export const login = async (req, res) => {
         message: "Invalid password",
       });
     }
-    const token = await Jwt.sign({_id: user._id}, process.env.ACCESS_TOKEN, {
+    const token = await jwt.sign({_id: user._id}, process.env.SECURITY_KEY, {
         expiresIn: "7d"
     })
     res.status(200).json({
