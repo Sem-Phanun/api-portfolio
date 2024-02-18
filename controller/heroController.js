@@ -50,8 +50,7 @@ export const createHero = async (req, res) => {
 export const getHero = async (req, res) => {
   const hero = await heroModel.find({});
   if (hero) {
-    return res.status(201).send({
-      message: "get success",
+    return res.status(201).json({
       hero,
     });
   } else {
