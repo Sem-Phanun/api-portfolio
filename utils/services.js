@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 
-app.use("/upload", express.static(path.join(__dirname, "public/upload")))
+app.use("/", express.static(path.join(__dirname, "public/upload")))
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
@@ -19,8 +19,8 @@ const storage = multer.diskStorage({
     filename: function(req, file, cb){
       const uniqueSuffix = Date.now() + "-" + Math.round(Math.random()* 1E9)
       req.body.image = uniqueSuffix
-      cb(null, "img-"+ uniqueSuffix + file.originalname)  
+      cb(null, "img-"+ uniqueSuffix + path.extname(file.originalname))  
     }
   })
   
-  export const upload = multer({ storage })
+export const upload = multer({ storage })
